@@ -45,13 +45,7 @@ def download_video(
 
     try:
         options = {
-            "format": "bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]/best[height<=720][ext=mp4]/best[height<=720]",
-            "outtmpl": os.path.join(temp_dir, "%(id)s.%(ext)s"),
-            "merge_output_format": "mp4",
-            "quiet": True,
-            "no_warnings": True,
-            "noplaylist": True,
-            "socket_timeout": 30,
+            "format": "bestvideo[height<=720]+bestaudio/best[height<=720]",
         }
 
         with yt_dlp.YoutubeDL(options) as ydl:
