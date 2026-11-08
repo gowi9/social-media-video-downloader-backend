@@ -84,6 +84,7 @@ def download_video(
 
         options = {
             "format": video_format,
+            "merge_output_format": "mp4",
             "outtmpl": os.path.join(
                 temp_dir,
                 "%(title).80s-%(id)s.%(ext)s"
