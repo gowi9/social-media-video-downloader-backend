@@ -45,7 +45,7 @@ def download_video(
 
     try:
         options = {
-            "format": "best[ext=mp4]/best",
+            "format": "bestvideo[height<=720][ext=mp4]+bestaudio[ext=m4a]/best[height<=720][ext=mp4]/best[height<=720]",
             "outtmpl": os.path.join(temp_dir, "%(id)s.%(ext)s"),
             "merge_output_format": "mp4",
             "quiet": True,
