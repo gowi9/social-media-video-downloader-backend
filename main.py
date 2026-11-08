@@ -45,7 +45,7 @@ def download_video(
 
     try:
         options = {
-            "format": "bestvideo[height<=720]+bestaudio/best[height<=720]",
+            "format": "best[ext=mp4]/best",
         }
 
         with yt_dlp.YoutubeDL(options) as ydl:
