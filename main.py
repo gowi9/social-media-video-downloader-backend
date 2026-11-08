@@ -75,13 +75,12 @@ def download_video(
     temp_dir = tempfile.mkdtemp(prefix="video_")
 
     try:
-        if format.lower() == "best":
-            video_format = "best[ext=mp4]/best"
-        else:
-            video_format = (
-                "best[height<=720][ext=mp4]/"
-                "best[height<=720]/best"
-            )
+        
+        video_format = (
+            "bestvideo[height<=720]+bestaudio/"
+            "best[height<=720]/best"
+        )
+
 
         options = {
             "format": video_format,
